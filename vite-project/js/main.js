@@ -17,16 +17,18 @@ import "../styles/style.css";
 //   console.log(result);
 // });
 
-const URL = "https://api.quotable.io/random";
+const URL = "https://wizard-world-api.herokuapp.com/swagger/v1/swagger.json";
 
 async function getData(URL) {
   try {
     const response = await fetch(URL);
     const data = await response.json(); //makes the data into JSON object so we can use
+    console.log(data);
     document.getElementById("api-response").insertAdjacentHTML(
       "afterbegin",
-      `<h3>Quote of the Day:</h3>
-        <p>${data.content}</p>`
+      `<h3>${data.title}</h3>
+      <img class="img" src=${data.url} alt="">
+        <p>${data.explanation}</p>`
     );
   } catch (error) {
     console.log(error);
