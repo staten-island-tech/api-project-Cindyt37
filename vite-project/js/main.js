@@ -17,21 +17,26 @@ import "../styles/style.css";
 //   console.log(result);
 // });
 
-const URL = "https://wizard-world-api.herokuapp.com/swagger/v1/swagger.json";
+const URL = "https://api.disneyapi.dev/characters";
 
 async function getData(URL) {
   try {
     const response = await fetch(URL);
     const data = await response.json(); //makes the data into JSON object so we can use
-    console.log(data);
-    document.getElementById("api-response").insertAdjacentHTML(
-      "afterbegin",
-      `<h3>${data.title}</h3>
-      <img class="img" src=${data.url} alt="">
-        <p>${data.explanation}</p>`
-    );
+    function displayCharacters() {
+      data.data.forEach((character) => {
+        document.getElementById("api-response").insertAdjacentHTML(
+          "afterbegin",
+          `<h3>${character.name}</h3>
+      <img class="img" src=${character.imageUrl} alt="">
+      <p>${character.url}</p>`
+        );
+      });
+    }
+    displayCharacters();
   } catch (error) {
     console.log(error);
+    alert("An error occured.");
   }
 }
 getData(URL);
