@@ -1,22 +1,5 @@
 import "../styles/style.css";
 
-// console.log("start");
-// setTimeout(() => {
-//   console.log("Timer");
-// }, 5000);
-// console.log("end");
-
-// function greet(name) {
-//   const greetPromise = new Promise(function (resolve, reject) {
-//     resolve(`Hello ${name}`);
-//   });
-//   return greetPromise;
-// }
-// const sophie = greet("Sophie");
-// sophie.then((result) => {
-//   console.log(result);
-// });
-
 const URL = "https://api.disneyapi.dev/characters";
 
 async function getData(URL) {
@@ -27,9 +10,13 @@ async function getData(URL) {
       data.data.forEach((character) => {
         document.getElementById("api-response").insertAdjacentHTML(
           "afterbegin",
-          `<h3>${character.name}</h3>
-      <img class="img" src=${character.imageUrl} alt="">
-      <p>${character.url}</p>`
+          `<div class= "character-card" id="${character.name}">
+                <h3 class= "character-name">${character.name}</h3>
+                <img class="img" src=${character.imageUrl} alt="">
+                <a class="link" href="${character.url}">
+                <button class="link-btn">${character.url}</button>
+                </a>
+            </div>`
         );
       });
     }
