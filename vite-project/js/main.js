@@ -13,8 +13,8 @@ async function getData(URL) {
           `<div class= "character-card" id="${character.name}">
                 <h3 class= "character-name">${character.name}</h3>
                 <img class="img" src=${character.imageUrl} alt="">
-                <a class="link" href="${character.url}">
-                <button class="link-btn">${character.url}</button>
+                <a class="link" href="https://api.disneyapi.dev/${character.name}/137">
+                <button class="link-btn">https://api.disneyapi.dev/${character.name}/137</button>
                 </a>
             </div>`
         );
