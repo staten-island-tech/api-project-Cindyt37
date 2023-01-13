@@ -11,11 +11,12 @@ async function getData(URL) {
         document.getElementById("api-response").insertAdjacentHTML(
           "afterbegin",
           `<div class= "character-card" id="${character.name}">
+                <img class="img" src=${character.imageUrl} alt="">                
                 <h3 class= "character-name">${character.name}</h3>
-                <img class="img" src=${character.imageUrl} alt="">
-                <a class="link" href="https://api.disneyapi.dev/${character.name}/137">
-                <button class="link-btn">https://api.disneyapi.dev/${character.name}/137</button>
-                </a>
+                <p class="character-info-title">Films/TV Shows ${character.name} is in:</p>
+                <p class="character-info">${character.tvShows}</p>
+                <p class="character-info">${character.films}</p>
+                <a class="link" href="https://api.disneyapi.dev/${character.name}/137"></a>
             </div>`
         );
       });
