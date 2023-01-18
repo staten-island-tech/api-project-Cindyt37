@@ -1,6 +1,7 @@
 import "../styles/style.css";
 
-const URL = "https://api.disneyapi.dev/characters";
+const pgNumber = Math.floor(Math.random() * 149 + 1);
+const URL = "https://api.disneyapi.dev/characters?page=" + pgNumber;
 
 async function getData(URL) {
   try {
@@ -18,7 +19,7 @@ async function getData(URL) {
                 <h3 class="character-info-title">Films/TV Shows ${character.name} is in:</h3>
                 <h3 class="character-info">${character.tvShows}</h3>
                 <h3 class="character-info">${character.films}</h3>
-                <h5><a class="link" href="https://api.disneyapi.dev/${character.name}/137">https://api.disneyapi.dev/${character.name}/137</a></h5></div>  
+                <h5 class="character-link"><a href="https://api.disneyapi.dev/${character.name}/137">https://api.disneyapi.dev/${character.name}/137</a></h5></div>  
             </div>`
         );
       });
