@@ -2,8 +2,8 @@
 
 //search bar
 .search-page {
-    height: 50%;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.6)), to(rgba(32, 32, 32, 0.6))),url("imgs/books5.jpg");
+    height: 10vh;
+    background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(90, 140, 247, 0.6)), to(rgba(76, 63, 255, 0.6))),url("https://d500.epimg.net/cincodias/imagenes/2018/08/27/smarttv/1535367133_945340_1535367290_noticia_normal.jpg");
     @include bkg-cover-fixed;
     @include flex-centered;
   }
@@ -12,7 +12,7 @@
     @include flex-centered;
     flex-direction: column;
     width: 75%;
-    padding-top:6rem;
+    padding-top: 6rem;
   }
   
   .search-text {
@@ -101,17 +101,4 @@
 .character-img {
     width: 100%;
     display: block;
-}
-
-  //errors
-.errors {
-  font-size: 2rem;
-  @include flex-centered;
-
-}
-
-.empty-input,
-.character-not-found {
-  margin: 5rem;
-  text-align: center;
 }
