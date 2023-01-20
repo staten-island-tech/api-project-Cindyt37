@@ -1,104 +1,60 @@
 @import "./header.css";
 
 //search bar
-.search-page {
-    height: 10vh;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(90, 140, 247, 0.6)), to(rgba(76, 63, 255, 0.6))),url("https://d500.epimg.net/cincodias/imagenes/2018/08/27/smarttv/1535367133_945340_1535367290_noticia_normal.jpg");
-    @include bkg-cover-fixed;
-    @include flex-centered;
-  }
-  
-  .search-section {
-    @include flex-centered;
-    flex-direction: column;
-    width: 75%;
-    padding-top: 6rem;
-  }
-  
-  .search-text {
-    font-size: 3rem;
-    color:white;
-    font-weight: 400;
-    margin-bottom: 4.5rem;
-    text-align: center;
-  }
-  
-  .search-form {
-    width: 60%;
-    display:flex;
-    flex-direction: row;
-  }
-  
-  .search-bar {
-    width: 100%;
-    padding: 1rem 2rem;
-    @include default-btns;
-  }
-  
-  .submit-btn {
-    width: 9rem;
-    padding: 5px 1rem;
-    color:black;
-    background-color: rgb(184, 184, 184);
-    @include default-btns;
-  }
 
-  .submit-btn:hover {
-    cursor: pointer;
-  }
   
-  //results
-  #api-response {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 98.5vw;
-    justify-content: space-around;
-    align-content: space-around;
+//results
+#api-response {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 98.5vw;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .character-card {
-    margin-top: 20px;
-    border: 10px solid rgba(68, 80, 247, 0.459);
-    border-radius: 25px;
-    padding: 6px;
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: rgba(68, 80, 247, 0.459);
+  margin-top: 20px;
+  border: 10px solid rgba(68, 80, 247, 0.459);
+  border-radius: 25px;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(68, 80, 247, 0.459);
 }
 .character-imgBox {
-    width: 50%;
-    margin-right: 1rem;
+  width: 50%;
+  margin-right: 1rem;
 }
 .character-words {
-    width: 50%;
+  width: 50%;
 }
 .character-name {
-    margin-bottom: 20px;
-    font-size: 40px;
-    color:rgb(0, 46, 145);
+  margin-bottom: 20px;
+  font-size: 40px;
+  color:rgb(0, 46, 145);
 }
 .character-info-title {
-    font-size: 20px;
-    color:rgb(0, 46, 145);
-    text-decoration: underline;
+  font-size: 20px;
+  color:rgb(0, 46, 145);
+  text-decoration: underline;
 
 }
 .character-info {
-    font-size: 20px;
-    color:rgb(0, 46, 145);
+  font-size: 20px;
+  color:rgb(0, 46, 145);
 }
 
 .character-link {
-    font-size: 3rem;
-    margin-top: 1rem;
+  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 .character-img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
