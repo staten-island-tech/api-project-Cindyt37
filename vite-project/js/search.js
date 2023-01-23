@@ -1,4 +1,4 @@
-import "../styles/search.css";
+@import "../styles/search.css";
 
 const DOMSelectors = {
   searchForm: document.querySelector(".search-form"),
