@@ -1,9 +1,6 @@
 @import "./header.css";
 
-//search bar
-
-  
-//results
+/* results */
 #api-response {
   display: flex;
   flex-direction: row;

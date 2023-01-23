@@ -4,14 +4,11 @@ const DOMSelectors = {
   searchForm: document.querySelector(".search-form"),
   searchInput: document.querySelector(".search-bar"),
   searchResults: document.querySelector(".searched-character"),
-  emptyInput: document.querySelector(".empty-input"),
+  emptyInput: document.querySelector(".emp ty-input"),
   characterUnfound: document.querySelector(".character-not-found"),
   errorSection: document.querySelector(".errors"),
   resultSection: document.querySelector(".searching-results"),
 };
-
-const pgNumber = Math.floor(Math.random() * 149 + 1);
-const URL = "https://api.disneyapi.dev/characters?page=" + pgNumber;
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
@@ -20,7 +17,7 @@ const listen = function () {
     const searchParams = DOMSelectors.searchInput.value.trim();
     const searchQuery = async function () {
       try {
-        const response = await fetch(URL);
+        const response = await fetch(`https://api.disneyapi.dev/character`);
         const data = await response.json();
         const results = data.results;
 
