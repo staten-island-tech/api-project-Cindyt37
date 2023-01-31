@@ -1,4 +1,4 @@
-import "../styles/search.css";
+import "../styles/style.css";
 
 const DOMSelectors = {
   searchForm: document.querySelector(".search-form"),
@@ -17,7 +17,7 @@ const listen = function () {
     const searchParams = DOMSelectors.searchInput.value.trim();
     const searchQuery = async function () {
       try {
-        const response = await fetch(`https://api.disneyapi.dev/character`);
+        const response = await fetch("https://api.disneyapi.dev/character");
         const data = await response.json();
         const results = data.results;
 
