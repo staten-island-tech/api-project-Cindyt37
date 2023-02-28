@@ -2,6 +2,9 @@ import "../styles/style.css";
 
 const pgNumber = Math.floor(Math.random() * 149 + 1);
 const URL = "https://api.disneyapi.dev/characters?page=" + pgNumber;
+const response = await fetch(URL);
+const data = await response.json();
+console.log(data);
 
 async function getData(URL) {
   try {
