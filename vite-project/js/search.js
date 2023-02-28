@@ -1,25 +1,22 @@
 import "../styles/search.css";
 
 const DOMSelectors = {
-  searchForm: document.querySelector(".search-form"),
+  form: document.querySelector(".search-form"),
   searchInput: document.querySelector(".search-bar"),
-  searchResults: document.querySelector(".searched-character"),
-  emptyInput: document.querySelector(".empty-input"),
-  characterUnfound: document.querySelector(".character-not-found"),
-  errorSection: document.querySelector(".errors"),
-  resultSection: document.querySelector(".searching-results"),
+  results: document.querySelector(".searched-character"),
+  input: document.getElementById("searchInput"),
 };
 
-async function getData() {
+async function getData(id) {
   try {
-    const response = await fetch(`https://api.disneyapi.dev/character`);
+    const response = await fetch(`https://api.disneyapi.dev/character/${id}`);
     if (response.status < 200 || response.status > 299) {
       throw error(response);
     } else {
       const data = await response.json();
       console.log(data);
       function displaySearch() {
-        DOMSelectors.resultSection.insertAdjacentHTML(
+        DOMSelectors.results.insertAdjacentHTML(
           "beforeend",
           `<div class= "character-card" id="${character.name}">
             <div class="character-imgBox">

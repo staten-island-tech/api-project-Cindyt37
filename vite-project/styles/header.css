@@ -46,3 +46,7 @@
     text-decoration: underline;
     color: rgb(0, 5, 68);
   }
+  .logo {
+    margin-left: 3rem;
+    height: 5vh;
+  }

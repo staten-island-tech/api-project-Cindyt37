@@ -22,23 +22,15 @@
 
       <section class="search-page">
         <div class="search-section">
-            <span class="search-text">Search for your favorite characters!</span>
             <form class="search-form">
                 <input 
                 class="search-bar" 
+                id="searchInput"
                 type="text" 
-                placeholder="Search for the character's name...">
-                <input class="submit-btn" type="submit">
+                placeholder="Search for the character using character's ID...">
             </form>
         </div>
-    </section>
-    <section class="searching-results">
-        <section class="searched-character">
-        </section>      
-    </section>
-    <section class="errors">
-        <div class="empty-input hidden">Please search by typing a character's name!</div>
-        <div class="character-not-found hidden">Sorry! It seems like we can't find this character.</div>
+        <div id="searching-results"></div>
     </section>
 
     <script type="module" src="../js/search.js"></script>
