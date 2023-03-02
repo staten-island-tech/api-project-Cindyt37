@@ -22,7 +22,8 @@ async function getData(URL) {
                 <h3 class="character-info-title">Films/TV Shows ${character.name} is in:</h3>
                 <h3 class="character-info">${character.tvShows}</h3>
                 <h3 class="character-info">${character.films}</h3>
-                <h5 class="character-link"><a href="https://api.disneyapi.dev/characters/${character._id}">https://api.disneyapi.dev/characters/${character._id}</a></h5></div>  
+                <h6 class="character_ID">Character ID: ${character._id}</h6>
+                </div>  
             </div>`
         );
       });
