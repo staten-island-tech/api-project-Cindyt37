@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css" />
   <title>API Project</title>
 </head>
 <body>
@@ -30,7 +31,17 @@
   </section>
   <div class="list-heading" id="character-list">
     <h2 class="list-header">Disney Characters</h2>
-    <a class="search-bar" href="search.html">Click here to search for characters...</a>
+    <section class="search-page">
+      <div class="search-section">
+          <form class="search-form">
+              <input 
+              class="search-bar" 
+              id="searchInput"
+              type="text" 
+              placeholder="Pick a random number from 1-7526 and see what character you get :)">
+          </form>
+      </div>
+  </section>
   </div>
   <h2 id="api-response"></h2>
   <script type="module" src="./js/main.js"></script>
