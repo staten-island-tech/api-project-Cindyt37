@@ -26,10 +26,8 @@ async function getCharacters(URL) {
                 <img class="character-img" src=${dataa.imageUrl} alt="${dataa.name}"></div>
                 <div class="character-words">              
                 <h3 class= "character-name">${dataa.name}</h3>
-                <h3 class="character-info-title">Films/TV Shows ${dataa.name} is in:</h3>
-                <h3 class="character-info">${dataa.tvShows}</h3>
-                <h3 class="character-info">${dataa.films}</h3>
-                <h5 class="character-link"><a href="https://api.disneyapi.dev/characters/${dataa._id}">https://api.disneyapi.dev/characters/${dataa._id}</a></h5></div>  
+                <h3 class= "character-id">ID: ${dataa._id}</h3>
+                <h4 class="character-link"><a href="https://api.disneyapi.dev/characters/${dataa._id}">https://api.disneyapi.dev/characters/${dataa._id}</a></h4></div>  
             </div>`
         );
       });
