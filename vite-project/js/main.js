@@ -55,9 +55,7 @@ async function getData(characterID) {
                 <img class="character-img" src=${data.imageUrl} alt="${data.name}"></div>
                 <div class="character-words">              
                 <h3 class= "character-name">${data.name}</h3>
-                <h3 class="character-info-title">Films/TV Shows ${data.name} is in:</h3>
-                <h3 class="character-info">${data.tvShows}</h3>
-                <h3 class="character-info">${data.films}</h3>
+                <h3 class="character-id">${data._id}</h3>
                 <h5 class="character-link"><a href="https://api.disneyapi.dev/characters/${data._id}">https://api.disneyapi.dev/characters/${data._id}</a></h5></div>  
             </div>`
       );
