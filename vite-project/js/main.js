@@ -23,7 +23,7 @@ async function getCharacters(URL) {
           "afterbegin",
           `<div class= "character-card" id="${dataa.name}">
           <div class="character-imgBox">
-                <img class="character-img" src=${dataa.imageUrl} alt="${dataa.name}"></div>
+                <img class="character-img" src=${dataa.imageUrl} alt="${dataa.name} and ${dataa._id}"></div>
                 <div class="character-words">              
                 <h3 class= "character-name">${dataa.name}</h3>
                 <h3 class= "character-id">ID: ${dataa._id}</h3>
